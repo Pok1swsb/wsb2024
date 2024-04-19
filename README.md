@@ -8,10 +8,12 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```
   # tworzymy hermetyczne środowisko dla bibliotek aplikacji:
   $ python -m venv .venv
+
   # aktywowanie hermetycznego środowiska
   $ source .venv/Scripts/activate
   $ pip install -r requirements.txt
   $ pip install -r test_requirements.txt
+
   # zobacz
   $ pip list
   ```
@@ -23,6 +25,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```
   # jako zwykły program
   $ python main.py
+
   # albo:
   $ PYTHONPATH=. FLASK_APP=hello_world flask run
   ```
@@ -43,6 +46,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
   ```
   ...
+
   # aktywacja 
   $ source .venv/Source/activate
   ```
@@ -69,10 +73,14 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
         container-selinux \
         docker-selinux \
         docker-engine
+
   $ yum install -y yum-utils
+
   $ yum-config-manager \
       --add-repo \
       https://download.docker.com/linux/centos/docker-ce.repo
+
   $ yum makecache fast
   $ yum install -y docker-ce
   $ systemctl start docker
+  ```
